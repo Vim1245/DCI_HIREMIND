@@ -29,10 +29,17 @@ import type {
 } from '../types';
 
 // Select primary API base URL
-// When running Vite dev server, /api proxy redirects directly to backend.
+// 1. Explicit VITE_API_URL set at build time (e.g., Render Static Site environment variable)
+// 2. Vite local development server with proxy (port 5173) -> use relative path ''
+// 3. Render cloud static hosting fallback -> point to backend Web Service
+// 4. Local desktop production test -> http://127.0.0.1:8080
 const API_BASE_URL =
   import.meta.env.VITE_API_URL ||
-  (window.location.port === '5173' ? '' : 'http://127.0.0.1:8080');
+  (window.location.port === '5173'
+    ? ''
+    : window.location.hostname.endsWith('onrender.com')
+    ? 'https://dci-hiremind.onrender.com'
+    : 'http://127.0.0.1:8080');
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,
