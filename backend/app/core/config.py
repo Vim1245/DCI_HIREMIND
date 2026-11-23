@@ -43,15 +43,17 @@ class Settings(BaseSettings):
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlkc2RoeW5wbWhsbGh3aHdkZHViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQ4OTYxOTUsImV4cCI6MjExMDQ3MjE5NX0._13OjNQg_239S9gRkf4NPOgzRG8pmFIx_d5bQXIebpw"
     )
     SUPABASE_PROJECT_REF: str = "idsdhynpmhllhwhwddub"
-    SUPABASE_DB_HOST: str = "db.idsdhynpmhllhwhwddub.supabase.co"
+    SUPABASE_DB_HOST: str = "aws-1-ap-northeast-1.pooler.supabase.com"
     SUPABASE_DB_PORT: int = 5432
-    SUPABASE_DB_USER: str = "postgres"
+    SUPABASE_DB_USER: str = "postgres.idsdhynpmhllhwhwddub"
     SUPABASE_DB_NAME: str = "postgres"
-    SUPABASE_DB_PASSWORD: Optional[str] = None
+    SUPABASE_DB_PASSWORD: Optional[str] = "Vimalraj@2002"
     SUPABASE_STORAGE_BUCKET_RESUMES: str = "resumes"
 
-    # Database Configuration (Supabase PostgreSQL primary)
-    DATABASE_URL: Optional[str] = None
+    # Database Configuration (Supabase PostgreSQL IPv4 Pooler primary)
+    DATABASE_URL: Optional[str] = (
+        "postgresql+pg8000://postgres.idsdhynpmhllhwhwddub:Vimalraj%402002@aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres"
+    )
 
     # Explicit SQLite local testing flag (default: False - never silently fall back)
     USE_SQLITE: bool = False
