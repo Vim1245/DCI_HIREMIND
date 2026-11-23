@@ -75,7 +75,7 @@ export const SettingsPage: React.FC = () => {
           {/* User Account Details */}
           <div className="enterprise-card p-6 space-y-4">
             <div className="flex items-center gap-2.5 pb-3 border-b border-slate-100">
-              <div className="p-2 bg-teal-50 text-teal-600 rounded-lg">
+              <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
                 <User className="w-5 h-5" />
               </div>
               <div>
@@ -95,8 +95,8 @@ export const SettingsPage: React.FC = () => {
               </div>
               <div className="flex justify-between py-2 border-b border-slate-50">
                 <span className="text-slate-500">Role Privilege</span>
-                <span className="inline-flex items-center gap-1 font-semibold text-xs px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-200">
-                  <Shield className="w-3 h-3 text-teal-600" />
+                <span className="inline-flex items-center gap-1 font-semibold text-xs px-2.5 py-0.5 rounded-full bg-blue-50 text-teal-700 border border-blue-200">
+                  <Shield className="w-3 h-3 text-blue-600" />
                   {user?.role || 'Admin'}
                 </span>
               </div>

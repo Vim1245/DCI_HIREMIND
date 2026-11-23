@@ -179,7 +179,7 @@ export const PublicJobApplyPage: React.FC = () => {
           <p className="text-xs text-slate-400">{jobError || 'The job you requested is unavailable.'}</p>
           <Link
             to="/careers"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500 text-slate-950 font-bold text-xs rounded-xl hover:bg-teal-400 transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-md shadow-blue-500/20 text-xs rounded-xl hover:bg-teal-400 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Return to Careers Homepage</span>
@@ -193,17 +193,17 @@ export const PublicJobApplyPage: React.FC = () => {
   if (submissionSuccess) {
     return (
       <div className="min-h-screen bg-slate-900 text-slate-100 flex items-center justify-center p-4">
-        <div className="max-w-xl w-full bg-slate-950 p-8 sm:p-10 rounded-3xl border border-teal-500/30 shadow-2xl text-center space-y-6 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-48 h-48 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="max-w-xl w-full bg-slate-950 p-8 sm:p-10 rounded-3xl border border-blue-500/30 shadow-2xl text-center space-y-6 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
-          <div className="w-16 h-16 bg-teal-500/15 border border-teal-500/30 rounded-2xl flex items-center justify-center mx-auto text-teal-400">
+          <div className="w-16 h-16 bg-blue-600/15 border border-blue-500/30 rounded-2xl flex items-center justify-center mx-auto text-blue-400">
             <CheckCircle2 className="w-10 h-10" />
           </div>
 
           <div className="space-y-2">
             <h1 className="text-2xl sm:text-3xl font-black text-white">Application Received!</h1>
             <p className="text-sm text-slate-300">
-              Thank you, <span className="font-semibold text-teal-400">{submissionSuccess.applicant_name}</span>. Your application for <span className="font-semibold text-white">{submissionSuccess.job_title}</span> has been stored in our recruitment system.
+              Thank you, <span className="font-semibold text-blue-400">{submissionSuccess.applicant_name}</span>. Your application for <span className="font-semibold text-white">{submissionSuccess.job_title}</span> has been stored in our recruitment system.
             </p>
           </div>
 
@@ -213,28 +213,28 @@ export const PublicJobApplyPage: React.FC = () => {
               Application Reference Number
             </div>
             <div className="flex items-center justify-center gap-3">
-              <span className="font-mono text-xl sm:text-2xl font-black text-teal-300 tracking-wider">
+              <span className="font-mono text-xl sm:text-2xl font-black text-blue-300 tracking-wider">
                 {submissionSuccess.reference_number}
               </span>
               <button
                 type="button"
                 onClick={handleCopyRef}
-                className="p-2 text-slate-400 hover:text-teal-300 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors cursor-pointer"
+                className="p-2 text-slate-400 hover:text-blue-300 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors cursor-pointer"
                 title="Copy reference number"
               >
                 <Copy className="w-4 h-4" />
               </button>
             </div>
             {refCopied && (
-              <p className="text-[11px] text-teal-400 font-medium">Copied to clipboard!</p>
+              <p className="text-[11px] text-blue-400 font-medium">Copied to clipboard!</p>
             )}
             <p className="text-[11px] text-slate-500">
               Please save this reference number for all future communications with our talent team.
             </p>
           </div>
 
-          <div className="p-4 bg-teal-500/5 rounded-xl border border-teal-500/10 text-xs text-slate-300 text-left space-y-2">
-            <div className="font-bold text-teal-400 flex items-center gap-1.5">
+          <div className="p-4 bg-blue-600/5 rounded-xl border border-blue-500/10 text-xs text-slate-300 text-left space-y-2">
+            <div className="font-bold text-blue-400 flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4" />
               <span>What Happens Next?</span>
             </div>
@@ -246,7 +246,7 @@ export const PublicJobApplyPage: React.FC = () => {
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               to="/careers"
-              className="w-full sm:w-auto px-6 py-2.5 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs rounded-xl transition-all shadow-md"
+              className="w-full sm:w-auto px-6 py-2.5 bg-blue-600 hover:bg-blue-500 text-white shadow-md shadow-blue-500/20 font-bold text-xs rounded-xl transition-all shadow-md"
             >
               Explore More Openings
             </Link>
@@ -258,7 +258,7 @@ export const PublicJobApplyPage: React.FC = () => {
 
   // APPLICATION FORM VIEW
   return (
-    <div className="min-h-screen bg-[#060c18] text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#060c18] text-slate-100 font-sans selection:bg-blue-600 selection:text-white">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-[#060c18]/90 backdrop-blur-xl border-b border-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -267,12 +267,12 @@ export const PublicJobApplyPage: React.FC = () => {
             className="inline-flex items-center gap-2.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors"
           >
             <DciLogo className="w-8 h-8" />
-            <ArrowLeft className="w-3.5 h-3.5 text-cyan-400" />
+            <ArrowLeft className="w-3.5 h-3.5 text-sky-400" />
             <span>Back to Role Details</span>
           </Link>
 
           <div className="text-xs text-slate-400">
-            Applying as a <span className="text-cyan-400 font-semibold">Public Applicant</span> (No login required)
+            Applying as a <span className="text-sky-400 font-semibold">Public Applicant</span> (No login required)
           </div>
         </div>
       </header>
@@ -282,7 +282,7 @@ export const PublicJobApplyPage: React.FC = () => {
         {/* Job Context Strip */}
         <div className="bg-slate-950 p-6 rounded-2xl border border-slate-800 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="text-[11px] font-bold text-teal-400 uppercase tracking-wider">
+            <div className="text-[11px] font-bold text-blue-400 uppercase tracking-wider">
               Application for Position
             </div>
             <h1 className="text-2xl font-black text-white mt-1">{job.title}</h1>
@@ -306,8 +306,8 @@ export const PublicJobApplyPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="shrink-0 bg-teal-500/10 border border-teal-500/20 px-3.5 py-2 rounded-xl text-center">
-            <span className="text-[11px] font-bold text-teal-400">100% Free & Open</span>
+          <div className="shrink-0 bg-blue-600/10 border border-blue-500/20 px-3.5 py-2 rounded-xl text-center">
+            <span className="text-[11px] font-bold text-blue-400">100% Free & Open</span>
             <div className="text-[10px] text-slate-400">No account required</div>
           </div>
         </div>
@@ -326,7 +326,7 @@ export const PublicJobApplyPage: React.FC = () => {
             {/* 1. Personal & Contact Information */}
             <div className="space-y-4">
               <h2 className="text-base font-bold text-white border-b border-slate-800 pb-2 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center text-xs font-black">
+                <span className="w-6 h-6 rounded-full bg-blue-600/10 text-blue-400 flex items-center justify-center text-xs font-black">
                   1
                 </span>
                 <span>Personal & Contact Information</span>
@@ -341,7 +341,7 @@ export const PublicJobApplyPage: React.FC = () => {
                     type="text"
                     {...register('first_name', { required: 'First name is required' })}
                     placeholder="e.g. Aravind"
-                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-white placeholder-slate-500"
+                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none text-white placeholder-slate-500"
                   />
                   {errors.first_name && (
                     <p className="text-xs text-rose-400 mt-1">{errors.first_name.message}</p>
@@ -356,7 +356,7 @@ export const PublicJobApplyPage: React.FC = () => {
                     type="text"
                     {...register('last_name', { required: 'Last name is required' })}
                     placeholder="e.g. Krishnan"
-                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-white placeholder-slate-500"
+                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none text-white placeholder-slate-500"
                   />
                   {errors.last_name && (
                     <p className="text-xs text-rose-400 mt-1">{errors.last_name.message}</p>
@@ -379,7 +379,7 @@ export const PublicJobApplyPage: React.FC = () => {
                       },
                     })}
                     placeholder="aravind@example.com"
-                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-white placeholder-slate-500"
+                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none text-white placeholder-slate-500"
                   />
                   {errors.email && (
                     <p className="text-xs text-rose-400 mt-1">{errors.email.message}</p>
@@ -394,7 +394,7 @@ export const PublicJobApplyPage: React.FC = () => {
                     type="tel"
                     {...register('phone', { required: 'Contact phone number is required' })}
                     placeholder="+91 98765 43210"
-                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-white placeholder-slate-500"
+                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none text-white placeholder-slate-500"
                   />
                   {errors.phone && (
                     <p className="text-xs text-rose-400 mt-1">{errors.phone.message}</p>
@@ -410,7 +410,7 @@ export const PublicJobApplyPage: React.FC = () => {
                   type="text"
                   {...register('location', { required: 'Location is required' })}
                   placeholder="e.g. Chennai, India or Remote / New York"
-                  className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-white placeholder-slate-500"
+                  className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none text-white placeholder-slate-500"
                 />
                 {errors.location && (
                   <p className="text-xs text-rose-400 mt-1">{errors.location.message}</p>
@@ -421,7 +421,7 @@ export const PublicJobApplyPage: React.FC = () => {
             {/* 2. Professional Qualifications */}
             <div className="space-y-4">
               <h2 className="text-base font-bold text-white border-b border-slate-800 pb-2 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center text-xs font-black">
+                <span className="w-6 h-6 rounded-full bg-blue-600/10 text-blue-400 flex items-center justify-center text-xs font-black">
                   2
                 </span>
                 <span>Qualifications & Skills</span>
@@ -434,7 +434,7 @@ export const PublicJobApplyPage: React.FC = () => {
                   </label>
                   <select
                     {...register('education_level', { required: 'Education level is required' })}
-                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-white"
+                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none text-white"
                   >
                     <option value="Bachelor's Degree">Bachelor&apos;s Degree (B.Tech / B.E. / B.S.)</option>
                     <option value="Master's Degree">Master&apos;s Degree (M.Tech / M.S. / M.B.A.)</option>
@@ -457,7 +457,7 @@ export const PublicJobApplyPage: React.FC = () => {
                       required: 'Experience in years is required',
                       valueAsNumber: true,
                     })}
-                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-white"
+                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none text-white"
                   />
                   {errors.years_of_experience && (
                     <p className="text-xs text-rose-400 mt-1">
@@ -475,7 +475,7 @@ export const PublicJobApplyPage: React.FC = () => {
                   type="text"
                   {...register('skills', { required: 'Please list your technical skills' })}
                   placeholder="e.g. Python, FastAPI, React, TypeScript, PostgreSQL, Docker"
-                  className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-white placeholder-slate-500"
+                  className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none text-white placeholder-slate-500"
                 />
                 {errors.skills && (
                   <p className="text-xs text-rose-400 mt-1">{errors.skills.message}</p>
@@ -491,7 +491,7 @@ export const PublicJobApplyPage: React.FC = () => {
                     type="url"
                     {...register('linkedin_url')}
                     placeholder="https://linkedin.com/in/username"
-                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-white placeholder-slate-500"
+                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none text-white placeholder-slate-500"
                   />
                 </div>
 
@@ -503,7 +503,7 @@ export const PublicJobApplyPage: React.FC = () => {
                     type="url"
                     {...register('portfolio_url')}
                     placeholder="https://github.com/username"
-                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-white placeholder-slate-500"
+                    className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none text-white placeholder-slate-500"
                   />
                 </div>
               </div>
@@ -512,13 +512,13 @@ export const PublicJobApplyPage: React.FC = () => {
             {/* 3. Resume File Upload */}
             <div className="space-y-4">
               <h2 className="text-base font-bold text-white border-b border-slate-800 pb-2 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center text-xs font-black">
+                <span className="w-6 h-6 rounded-full bg-blue-600/10 text-blue-400 flex items-center justify-center text-xs font-black">
                   3
                 </span>
                 <span>Resume Document Upload</span>
               </h2>
 
-              <div className="border-2 border-dashed border-slate-700 hover:border-teal-500/60 rounded-2xl p-6 sm:p-8 text-center transition-colors bg-slate-900/60">
+              <div className="border-2 border-dashed border-slate-700 hover:border-blue-500/60 rounded-2xl p-6 sm:p-8 text-center transition-colors bg-slate-900/60">
                 <input
                   type="file"
                   id="resume-upload"
@@ -527,11 +527,11 @@ export const PublicJobApplyPage: React.FC = () => {
                   className="hidden"
                 />
                 <label htmlFor="resume-upload" className="cursor-pointer block space-y-3">
-                  <div className="w-12 h-12 bg-teal-500/10 text-teal-400 rounded-xl flex items-center justify-center mx-auto">
+                  <div className="w-12 h-12 bg-blue-600/10 text-blue-400 rounded-xl flex items-center justify-center mx-auto">
                     <Upload className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-sm font-bold text-teal-400 hover:underline">
+                    <span className="text-sm font-bold text-blue-400 hover:underline">
                       Click to choose your resume file
                     </span>
                     <span className="text-slate-400 text-sm"> or drag and drop</span>
@@ -543,7 +543,7 @@ export const PublicJobApplyPage: React.FC = () => {
 
                 {resumeFile && (
                   <div className="mt-4 inline-flex items-center gap-2 p-2.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs text-slate-200">
-                    <FileText className="w-4 h-4 text-teal-400" />
+                    <FileText className="w-4 h-4 text-blue-400" />
                     <span className="font-semibold text-white">{resumeFile.name}</span>
                     <span className="text-slate-400">
                       ({(resumeFile.size / 1024).toFixed(1)} KB)
@@ -558,7 +558,7 @@ export const PublicJobApplyPage: React.FC = () => {
             {/* 4. Cover Letter */}
             <div className="space-y-4">
               <h2 className="text-base font-bold text-white border-b border-slate-800 pb-2 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center text-xs font-black">
+                <span className="w-6 h-6 rounded-full bg-blue-600/10 text-blue-400 flex items-center justify-center text-xs font-black">
                   4
                 </span>
                 <span>Cover Letter / Additional Notes <span className="text-slate-500 font-normal text-xs">(Optional)</span></span>
@@ -569,7 +569,7 @@ export const PublicJobApplyPage: React.FC = () => {
                   rows={4}
                   {...register('cover_letter')}
                   placeholder="Introduce yourself, your key achievements, and why you are excited to join DCI HireMind..."
-                  className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-white placeholder-slate-500 leading-relaxed"
+                  className="w-full px-3.5 py-2.5 text-sm bg-slate-900 border border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none text-white placeholder-slate-500 leading-relaxed"
                 />
               </div>
             </div>
@@ -579,7 +579,7 @@ export const PublicJobApplyPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 text-sm font-bold text-slate-950 bg-teal-400 hover:bg-teal-300 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl transition-all shadow-xl shadow-teal-500/20 cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-sm shadow-blue-500/20 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl transition-all shadow-xl shadow-teal-500/20 cursor-pointer"
               >
                 <Send className="w-4 h-4" />
                 <span>
@@ -590,7 +590,7 @@ export const PublicJobApplyPage: React.FC = () => {
               </button>
 
               <div className="mt-4 flex items-center justify-center gap-2 text-xs text-slate-400 text-center">
-                <ShieldCheck className="w-4 h-4 text-teal-400 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-blue-400 shrink-0" />
                 <span>
                   Your application will be stored privately in our Supabase PostgreSQL database. No login required.
                 </span>

@@ -69,7 +69,7 @@ export const PublicJobDetailPage: React.FC = () => {
           <p className="text-xs text-slate-400">{error || 'Job requisition was not found.'}</p>
           <Link
             to="/careers"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500 text-slate-950 font-bold text-xs rounded-xl hover:bg-teal-400 transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-md shadow-blue-500/20 text-xs rounded-xl hover:bg-teal-400 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Browse All Open Roles</span>
@@ -80,7 +80,7 @@ export const PublicJobDetailPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#060c18] text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#060c18] text-slate-100 font-sans selection:bg-blue-600 selection:text-white">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-[#060c18]/90 backdrop-blur-xl border-b border-slate-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -97,12 +97,12 @@ export const PublicJobDetailPage: React.FC = () => {
               onClick={handleShare}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700/80 rounded-lg border border-slate-700 transition-all cursor-pointer"
             >
-              <Share2 className="w-3.5 h-3.5 text-teal-400" />
+              <Share2 className="w-3.5 h-3.5 text-blue-400" />
               <span>{copied ? 'Link Copied!' : 'Share Role'}</span>
             </button>
             <Link
               to={`/careers/apply/${job.id}`}
-              className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold text-slate-950 bg-teal-400 hover:bg-teal-300 rounded-lg transition-colors shadow-sm"
+              className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-sm shadow-blue-500/20 rounded-lg transition-colors shadow-sm"
             >
               <span>Apply Now</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -115,10 +115,10 @@ export const PublicJobDetailPage: React.FC = () => {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 space-y-8">
         {/* Hero Card */}
         <div className="bg-slate-950 rounded-3xl p-8 sm:p-10 border border-slate-800 shadow-xl space-y-6 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
 
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs font-bold text-teal-400 bg-teal-500/10 border border-teal-500/20 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">
               {job.department || 'General Department'}
             </span>
             <span className="text-xs font-medium text-slate-300 bg-slate-800/80 px-3 py-1 rounded-full">
@@ -162,7 +162,7 @@ export const PublicJobDetailPage: React.FC = () => {
                   <DollarSign className="w-3.5 h-3.5 text-slate-400" />
                   <span>Salary Estimate</span>
                 </div>
-                <div className="font-semibold text-teal-400">
+                <div className="font-semibold text-blue-400">
                   ${job.salary_min ? job.salary_min.toLocaleString() : '0'}
                   {job.salary_max ? ` - $${job.salary_max.toLocaleString()}` : '+'}
                 </div>
@@ -171,10 +171,10 @@ export const PublicJobDetailPage: React.FC = () => {
 
             <div className="space-y-1">
               <div className="text-slate-500 flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-teal-400" />
+                <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
                 <span>Review Policy</span>
               </div>
-              <div className="font-semibold text-teal-300">Human Decision Guaranteed</div>
+              <div className="font-semibold text-blue-300">Human Decision Guaranteed</div>
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ export const PublicJobDetailPage: React.FC = () => {
             {/* Description */}
             <div className="bg-slate-950 rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-4">
               <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                <Briefcase className="w-4 h-4 text-teal-400" />
+                <Briefcase className="w-4 h-4 text-blue-400" />
                 <span>Role Overview & Responsibilities</span>
               </h2>
               <div className="text-sm text-slate-300 whitespace-pre-line leading-relaxed">
@@ -198,7 +198,7 @@ export const PublicJobDetailPage: React.FC = () => {
             {job.requirements && (
               <div className="bg-slate-950 rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-4">
                 <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal-400" />
+                  <CheckCircle2 className="w-4 h-4 text-blue-400" />
                   <span>Candidate Requirements & Qualifications</span>
                 </h2>
                 <div className="text-sm text-slate-300 whitespace-pre-line leading-relaxed">
@@ -208,7 +208,7 @@ export const PublicJobDetailPage: React.FC = () => {
             )}
 
             {/* Application Banner Callout */}
-            <div className="bg-linear-to-r from-teal-500/15 via-slate-900 to-slate-950 p-6 sm:p-8 rounded-2xl border border-teal-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="bg-linear-to-r from-teal-500/15 via-slate-900 to-slate-950 p-6 sm:p-8 rounded-2xl border border-blue-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
               <div className="space-y-1 text-center sm:text-left">
                 <h3 className="text-lg font-bold text-white">Ready to Shape the Future with Us?</h3>
                 <p className="text-xs text-slate-300">
@@ -217,7 +217,7 @@ export const PublicJobDetailPage: React.FC = () => {
               </div>
               <Link
                 to={`/careers/apply/${job.id}`}
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-slate-950 bg-teal-400 hover:bg-teal-300 rounded-xl transition-all shadow-lg shadow-teal-500/20 shrink-0"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-sm shadow-blue-500/20 rounded-xl transition-all shadow-lg shadow-teal-500/20 shrink-0"
               >
                 <span>Apply for this Role</span>
                 <ArrowRight className="w-4 h-4" />
@@ -237,7 +237,7 @@ export const PublicJobDetailPage: React.FC = () => {
                   {job.required_skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="text-xs font-semibold bg-slate-900 border border-slate-800 text-teal-300 px-3 py-1 rounded-lg"
+                      className="text-xs font-semibold bg-slate-900 border border-slate-800 text-blue-300 px-3 py-1 rounded-lg"
                     >
                       {skill}
                     </span>
@@ -253,7 +253,7 @@ export const PublicJobDetailPage: React.FC = () => {
               </h3>
               <div className="space-y-3 text-xs text-slate-400">
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
                     1
                   </div>
                   <div>
@@ -265,7 +265,7 @@ export const PublicJobDetailPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
                     2
                   </div>
                   <div>
@@ -277,7 +277,7 @@ export const PublicJobDetailPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
                     3
                   </div>
                   <div>

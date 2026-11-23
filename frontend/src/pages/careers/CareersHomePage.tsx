@@ -117,10 +117,10 @@ export const CareersHomePage: React.FC = () => {
   const getDepartmentIcon = (dept?: string | null) => {
     const d = (dept || '').toLowerCase();
     if (d.includes('ai') || d.includes('intelligence') || d.includes('machine')) {
-      return <Cpu className="w-4 h-4 text-[#00D4D8]" />;
+      return <Cpu className="w-4 h-4 text-[#2563EB]" />;
     }
     if (d.includes('engineer') || d.includes('tech') || d.includes('software')) {
-      return <Code className="w-4 h-4 text-[#00C9A7]" />;
+      return <Code className="w-4 h-4 text-[#38BDF8]" />;
     }
     if (d.includes('design') || d.includes('product') || d.includes('ux')) {
       return <Palette className="w-4 h-4 text-purple-400" />;
@@ -132,7 +132,7 @@ export const CareersHomePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B1120] text-slate-100 font-sans selection:bg-[#00D4D8] selection:text-[#0B1120]">
+    <div className="min-h-screen bg-[#0B1120] text-slate-100 font-sans selection:bg-[#2563EB] selection:text-[#0B1120]">
       {/* ========================================================================= */}
       {/* 1. HEADER & BRANDING (Cyan/Teal Lightning Bolt Icon + DCI HireMind)       */}
       {/* ========================================================================= */}
@@ -151,25 +151,25 @@ export const CareersHomePage: React.FC = () => {
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
             <button
               onClick={() => scrollToSection('open-positions')}
-              className="hover:text-[#00D4D8] transition-colors cursor-pointer"
+              className="hover:text-[#2563EB] transition-colors cursor-pointer"
             >
               Open Positions
             </button>
             <button
               onClick={() => scrollToSection('about-us')}
-              className="hover:text-[#00D4D8] transition-colors cursor-pointer"
+              className="hover:text-[#2563EB] transition-colors cursor-pointer"
             >
               About Us
             </button>
             <button
               onClick={() => scrollToSection('why-join-us')}
-              className="hover:text-[#00D4D8] transition-colors cursor-pointer"
+              className="hover:text-[#2563EB] transition-colors cursor-pointer"
             >
               Why Join Us
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="hover:text-[#00D4D8] transition-colors cursor-pointer"
+              className="hover:text-[#2563EB] transition-colors cursor-pointer"
             >
               Contact
             </button>
@@ -179,9 +179,9 @@ export const CareersHomePage: React.FC = () => {
           <div className="hidden sm:flex items-center gap-3">
             <Link
               to="/login"
-              className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-slate-200 hover:text-white bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 rounded-xl transition-all shadow-sm shadow-black/40 hover:border-[#00D4D8]/40 hover:shadow-[#00D4D8]/10"
+              className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-slate-200 hover:text-white bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 rounded-xl transition-all shadow-sm shadow-black/40 hover:border-[#2563EB]/40 hover:shadow-[#2563EB]/10"
             >
-              <LogIn className="w-3.5 h-3.5 text-[#00D4D8]" />
+              <LogIn className="w-3.5 h-3.5 text-[#2563EB]" />
               <span>HR Admin Portal</span>
             </Link>
           </div>
@@ -193,7 +193,7 @@ export const CareersHomePage: React.FC = () => {
               className="p-2 text-xs text-slate-300 bg-slate-900 border border-slate-800 rounded-lg"
               title="HR Portal"
             >
-              <LogIn className="w-4 h-4 text-[#00D4D8]" />
+              <LogIn className="w-4 h-4 text-[#2563EB]" />
             </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -210,25 +210,25 @@ export const CareersHomePage: React.FC = () => {
           <div className="md:hidden bg-[#0B1120] border-b border-slate-800 px-4 py-4 space-y-3">
             <button
               onClick={() => scrollToSection('open-positions')}
-              className="block w-full text-left py-2 text-sm text-slate-300 hover:text-[#00D4D8] font-medium"
+              className="block w-full text-left py-2 text-sm text-slate-300 hover:text-[#2563EB] font-medium"
             >
               Open Positions
             </button>
             <button
               onClick={() => scrollToSection('about-us')}
-              className="block w-full text-left py-2 text-sm text-slate-300 hover:text-[#00D4D8] font-medium"
+              className="block w-full text-left py-2 text-sm text-slate-300 hover:text-[#2563EB] font-medium"
             >
               About Us
             </button>
             <button
               onClick={() => scrollToSection('why-join-us')}
-              className="block w-full text-left py-2 text-sm text-slate-300 hover:text-[#00D4D8] font-medium"
+              className="block w-full text-left py-2 text-sm text-slate-300 hover:text-[#2563EB] font-medium"
             >
               Why Join Us
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left py-2 text-sm text-slate-300 hover:text-[#00D4D8] font-medium"
+              className="block w-full text-left py-2 text-sm text-slate-300 hover:text-[#2563EB] font-medium"
             >
               Contact
             </button>
@@ -237,7 +237,7 @@ export const CareersHomePage: React.FC = () => {
                 to="/login"
                 className="w-full inline-flex items-center justify-center gap-2 py-2.5 text-xs font-semibold text-white bg-slate-800 rounded-lg border border-slate-700"
               >
-                <LogIn className="w-3.5 h-3.5 text-[#00D4D8]" />
+                <LogIn className="w-3.5 h-3.5 text-[#2563EB]" />
                 <span>HR Admin Portal</span>
               </Link>
             </div>
@@ -250,23 +250,23 @@ export const CareersHomePage: React.FC = () => {
       {/* ========================================================================= */}
       <section id="hero" className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-[#0B1120] via-[#09152b] to-[#0B1120]">
         {/* Glow Spheres & Gradient Accents */}
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#00D4D8]/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute top-1/3 -right-32 w-96 h-96 bg-[#00C9A7]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#2563EB]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/3 -right-32 w-96 h-96 bg-[#38BDF8]/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Column: Heading, Subtitle & Dual CTAs */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#00D4D8]/10 border border-[#00D4D8]/25 text-[#00D4D8] text-xs font-semibold tracking-wide shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-[#00D4D8] animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2563EB]/10 border border-[#2563EB]/25 text-[#2563EB] text-xs font-semibold tracking-wide shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-[#2563EB] animate-pulse" />
                 <span>Now Hiring · {total} Live Requisitions Across Engineering & AI</span>
               </div>
 
               {/* Large Main Heading (Exact wording) */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12]">
                 Build Your Future with{' '}
-                <span className="bg-gradient-to-r from-[#00D4D8] via-[#00C9A7] to-emerald-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#2563EB] via-[#38BDF8] to-emerald-400 bg-clip-text text-transparent">
                   DCI HireMind
                 </span>
               </h1>
@@ -280,7 +280,7 @@ export const CareersHomePage: React.FC = () => {
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
                 <button
                   onClick={() => scrollToSection('open-positions')}
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-[#00D4D8] to-[#00C9A7] hover:from-cyan-400 hover:to-teal-400 text-[#0B1120] font-bold text-sm rounded-xl shadow-lg shadow-[#00D4D8]/25 hover:shadow-[#00D4D8]/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-[#2563EB] to-[#38BDF8] hover:from-cyan-400 hover:to-teal-400 text-[#0B1120] font-bold text-sm rounded-xl shadow-lg shadow-[#2563EB]/25 hover:shadow-[#2563EB]/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
                 >
                   <Briefcase className="w-4 h-4" />
                   <span>Explore Opportunities</span>
@@ -291,7 +291,7 @@ export const CareersHomePage: React.FC = () => {
                   className="inline-flex items-center gap-2 px-6 py-3.5 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm rounded-xl border border-slate-700 hover:border-slate-600 transition-all cursor-pointer"
                 >
                   <span>Learn More About Us</span>
-                  <ArrowRight className="w-4 h-4 text-[#00D4D8]" />
+                  <ArrowRight className="w-4 h-4 text-[#2563EB]" />
                 </button>
               </div>
 
@@ -302,11 +302,11 @@ export const CareersHomePage: React.FC = () => {
                   <div className="text-xs text-slate-400 mt-0.5">Open Positions</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-black text-[#00D4D8]">100%</div>
+                  <div className="text-2xl font-black text-[#2563EB]">100%</div>
                   <div className="text-xs text-slate-400 mt-0.5">Fair & Ethical AI</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-black text-[#00C9A7]">48h</div>
+                  <div className="text-2xl font-black text-[#38BDF8]">48h</div>
                   <div className="text-xs text-slate-400 mt-0.5">Average Review Time</div>
                 </div>
               </div>
@@ -316,10 +316,10 @@ export const CareersHomePage: React.FC = () => {
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none">
                 {/* Decorative glow backing */}
-                <div className="absolute -inset-2 bg-gradient-to-r from-[#00D4D8]/20 via-[#00C9A7]/20 to-purple-500/20 rounded-3xl blur-xl opacity-75" />
+                <div className="absolute -inset-2 bg-gradient-to-r from-[#2563EB]/20 via-[#38BDF8]/20 to-purple-500/20 rounded-3xl blur-xl opacity-75" />
 
                 {/* Main Office Image */}
-                <div className="relative rounded-3xl overflow-hidden border border-slate-700/80 bg-slate-900 shadow-2xl shadow-[#00D4D8]/10">
+                <div className="relative rounded-3xl overflow-hidden border border-slate-700/80 bg-slate-900 shadow-2xl shadow-[#2563EB]/10">
                   <img
                     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
                     alt="DCI HireMind Corporate Team Collaborating and Discussing Technology"
@@ -335,9 +335,9 @@ export const CareersHomePage: React.FC = () => {
                 </div>
 
                 {/* Floating Badge 1 (Top Left) */}
-                <div className="absolute -top-4 -left-4 sm:-left-6 bg-slate-950/90 backdrop-blur-md border border-[#00D4D8]/30 shadow-xl shadow-black/50 p-3 rounded-2xl flex items-center gap-3 animate-float">
-                  <div className="w-8 h-8 rounded-lg bg-[#00D4D8]/20 text-[#00D4D8] flex items-center justify-center shrink-0">
-                    <Zap className="w-4 h-4 fill-[#00D4D8]" />
+                <div className="absolute -top-4 -left-4 sm:-left-6 bg-slate-950/90 backdrop-blur-md border border-[#2563EB]/30 shadow-xl shadow-black/50 p-3 rounded-2xl flex items-center gap-3 animate-float">
+                  <div className="w-8 h-8 rounded-lg bg-[#2563EB]/20 text-[#2563EB] flex items-center justify-center shrink-0">
+                    <Zap className="w-4 h-4 fill-[#2563EB]" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-white flex items-center gap-1.5">
@@ -349,8 +349,8 @@ export const CareersHomePage: React.FC = () => {
                 </div>
 
                 {/* Floating Badge 2 (Bottom Right) */}
-                <div className="absolute -bottom-4 -right-4 sm:-right-6 bg-slate-950/90 backdrop-blur-md border border-[#00C9A7]/30 shadow-xl shadow-black/50 p-3 rounded-2xl flex items-center gap-3 animate-float-delayed">
-                  <div className="w-8 h-8 rounded-lg bg-[#00C9A7]/20 text-[#00C9A7] flex items-center justify-center shrink-0">
+                <div className="absolute -bottom-4 -right-4 sm:-right-6 bg-slate-950/90 backdrop-blur-md border border-[#38BDF8]/30 shadow-xl shadow-black/50 p-3 rounded-2xl flex items-center gap-3 animate-float-delayed">
+                  <div className="w-8 h-8 rounded-lg bg-[#38BDF8]/20 text-[#38BDF8] flex items-center justify-center shrink-0">
                     <ShieldCheck className="w-4 h-4" />
                   </div>
                   <div>
@@ -370,7 +370,7 @@ export const CareersHomePage: React.FC = () => {
       <section className="py-16 bg-[#08101f] border-t border-slate-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <span className="text-xs font-bold text-[#00D4D8] uppercase tracking-wider">
+            <span className="text-xs font-bold text-[#2563EB] uppercase tracking-wider">
               Life at DCI HireMind
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
@@ -383,7 +383,7 @@ export const CareersHomePage: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Visual Card 1: Team Collaboration */}
-            <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-[#00D4D8]/40 transition-all duration-300 shadow-lg hover:-translate-y-1">
+            <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-[#2563EB]/40 transition-all duration-300 shadow-lg hover:-translate-y-1">
               <div className="h-48 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
@@ -392,7 +392,7 @@ export const CareersHomePage: React.FC = () => {
                 />
               </div>
               <div className="p-4 space-y-1">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-[#00D4D8]">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-[#2563EB]">
                   <Users className="w-3.5 h-3.5" />
                   <span>Team Collaboration</span>
                 </div>
@@ -403,7 +403,7 @@ export const CareersHomePage: React.FC = () => {
             </div>
 
             {/* Visual Card 2: AI & Technology Innovation */}
-            <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-[#00C9A7]/40 transition-all duration-300 shadow-lg hover:-translate-y-1">
+            <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-[#38BDF8]/40 transition-all duration-300 shadow-lg hover:-translate-y-1">
               <div className="h-48 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
@@ -412,7 +412,7 @@ export const CareersHomePage: React.FC = () => {
                 />
               </div>
               <div className="p-4 space-y-1">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-[#00C9A7]">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-[#38BDF8]">
                   <Cpu className="w-3.5 h-3.5" />
                   <span>AI & Tech Innovation</span>
                 </div>
@@ -473,7 +473,7 @@ export const CareersHomePage: React.FC = () => {
           {/* Section Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 text-[#00D4D8] text-xs font-bold uppercase tracking-wider mb-2">
+              <div className="inline-flex items-center gap-2 text-[#2563EB] text-xs font-bold uppercase tracking-wider mb-2">
                 <Briefcase className="w-4 h-4" />
                 <span>Career Opportunities</span>
               </div>
@@ -505,7 +505,7 @@ export const CareersHomePage: React.FC = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search by job title, keyword, or required tech (e.g. React, Python, Architect)..."
-                  className="w-full pl-10 pr-4 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#00D4D8]/50"
+                  className="w-full pl-10 pr-4 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#2563EB]/50"
                 />
               </form>
 
@@ -562,7 +562,7 @@ export const CareersHomePage: React.FC = () => {
               {/* Find Roles Button */}
               <button
                 onClick={fetchJobs}
-                className="px-5 py-2.5 bg-[#00D4D8] hover:bg-cyan-400 text-[#0B1120] font-bold text-xs rounded-xl shadow-md transition-colors cursor-pointer shrink-0"
+                className="px-5 py-2.5 bg-[#2563EB] hover:bg-cyan-400 text-[#0B1120] font-bold text-xs rounded-xl shadow-md transition-colors cursor-pointer shrink-0"
               >
                 Filter
               </button>
@@ -600,12 +600,12 @@ export const CareersHomePage: React.FC = () => {
               {jobs.map((job) => (
                 <div
                   key={job.id}
-                  className="flex flex-col justify-between bg-[#0B1528]/80 border border-slate-800/90 hover:border-[#00D4D8]/40 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#00D4D8]/10 group"
+                  className="flex flex-col justify-between bg-[#0B1528]/80 border border-slate-800/90 hover:border-[#2563EB]/40 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#2563EB]/10 group"
                 >
                   <div className="space-y-3">
                     {/* Header Tags */}
                     <div className="flex items-center justify-between gap-2">
-                      <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#00D4D8] bg-[#00D4D8]/10 border border-[#00D4D8]/20 px-2.5 py-0.5 rounded-full">
+                      <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#2563EB] bg-[#2563EB]/10 border border-[#2563EB]/20 px-2.5 py-0.5 rounded-full">
                         {getDepartmentIcon(job.department)}
                         <span>{job.department || 'General'}</span>
                       </span>
@@ -615,7 +615,7 @@ export const CareersHomePage: React.FC = () => {
                     </div>
 
                     {/* Job Title */}
-                    <h3 className="text-lg font-bold text-white group-hover:text-[#00D4D8] transition-colors line-clamp-2">
+                    <h3 className="text-lg font-bold text-white group-hover:text-[#2563EB] transition-colors line-clamp-2">
                       {job.title}
                     </h3>
 
@@ -670,7 +670,7 @@ export const CareersHomePage: React.FC = () => {
                     </Link>
                     <Link
                       to={`/careers/apply/${job.id}`}
-                      className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold text-[#0B1120] bg-gradient-to-r from-[#00D4D8] to-[#00C9A7] hover:from-cyan-400 hover:to-teal-400 rounded-lg transition-all shadow-sm"
+                      className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold text-[#0B1120] bg-gradient-to-r from-[#2563EB] to-[#38BDF8] hover:from-cyan-400 hover:to-teal-400 rounded-lg transition-all shadow-sm"
                     >
                       <span>Apply Now</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -691,7 +691,7 @@ export const CareersHomePage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: Corporate Team Meeting Image */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden border border-slate-700/80 bg-slate-900 shadow-2xl shadow-[#00D4D8]/10">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-700/80 bg-slate-900 shadow-2xl shadow-[#2563EB]/10">
                 <img
                   src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=80"
                   alt="DCI HireMind Team Strategy Session"
@@ -706,7 +706,7 @@ export const CareersHomePage: React.FC = () => {
                     <div className="text-[11px] text-slate-400">Applications Screened Fairly</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-xl font-black text-[#00D4D8]">99.4%</div>
+                    <div className="text-xl font-black text-[#2563EB]">99.4%</div>
                     <div className="text-[11px] text-slate-400">Objective Accuracy</div>
                   </div>
                 </div>
@@ -716,7 +716,7 @@ export const CareersHomePage: React.FC = () => {
             {/* Right Column: Mission, Vision & AI Innovation */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <span className="text-xs font-bold text-[#00D4D8] uppercase tracking-wider">
+                <span className="text-xs font-bold text-[#2563EB] uppercase tracking-wider">
                   About DCI HireMind
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-1.5 leading-tight">
@@ -732,7 +732,7 @@ export const CareersHomePage: React.FC = () => {
               {/* Mission & Vision Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-4 bg-slate-900/80 border border-slate-800 rounded-2xl">
-                  <div className="w-8 h-8 rounded-lg bg-[#00D4D8]/10 border border-[#00D4D8]/20 text-[#00D4D8] flex items-center justify-center mb-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#2563EB]/10 border border-[#2563EB]/20 text-[#2563EB] flex items-center justify-center mb-2.5">
                     <Target className="w-4 h-4" />
                   </div>
                   <h4 className="text-sm font-bold text-white">Our Mission</h4>
@@ -742,7 +742,7 @@ export const CareersHomePage: React.FC = () => {
                 </div>
 
                 <div className="p-4 bg-slate-900/80 border border-slate-800 rounded-2xl">
-                  <div className="w-8 h-8 rounded-lg bg-[#00C9A7]/10 border border-[#00C9A7]/20 text-[#00C9A7] flex items-center justify-center mb-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#38BDF8]/10 border border-[#38BDF8]/20 text-[#38BDF8] flex items-center justify-center mb-2.5">
                     <Compass className="w-4 h-4" />
                   </div>
                   <h4 className="text-sm font-bold text-white">Our Vision</h4>
@@ -755,15 +755,15 @@ export const CareersHomePage: React.FC = () => {
               {/* Core Innovation Highlights */}
               <div className="space-y-2.5 pt-1">
                 <div className="flex items-center gap-3 text-xs text-slate-200">
-                  <CheckCircle2 className="w-4 h-4 text-[#00D4D8] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2563EB] shrink-0" />
                   <span>Explainable AI Match Scoring — Full transparency for every candidate recommendation</span>
                 </div>
                 <div className="flex items-center gap-3 text-xs text-slate-200">
-                  <CheckCircle2 className="w-4 h-4 text-[#00D4D8] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2563EB] shrink-0" />
                   <span>Mandatory Human Oversight on Rejections — Zero automated candidate disqualification</span>
                 </div>
                 <div className="flex items-center gap-3 text-xs text-slate-200">
-                  <CheckCircle2 className="w-4 h-4 text-[#00D4D8] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2563EB] shrink-0" />
                   <span>Enterprise Data Isolation — Isolated Supabase cloud storage for candidate privacy</span>
                 </div>
               </div>
@@ -778,7 +778,7 @@ export const CareersHomePage: React.FC = () => {
       <section id="why-join-us" className="py-20 bg-[#070e1e] border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-bold text-[#00D4D8] uppercase tracking-wider">
+            <span className="text-xs font-bold text-[#2563EB] uppercase tracking-wider">
               Life at DCI HireMind
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
@@ -791,11 +791,11 @@ export const CareersHomePage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Benefit 1: Career Growth */}
-            <div className="p-6 bg-slate-950/70 border border-slate-800/80 hover:border-[#00D4D8]/40 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#00D4D8]/5 group">
-              <div className="w-11 h-11 bg-[#00D4D8]/10 border border-[#00D4D8]/20 text-[#00D4D8] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <div className="p-6 bg-slate-950/70 border border-slate-800/80 hover:border-[#2563EB]/40 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#2563EB]/5 group">
+              <div className="w-11 h-11 bg-[#2563EB]/10 border border-[#2563EB]/20 text-[#2563EB] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <TrendingUp className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-white group-hover:text-[#00D4D8] transition-colors">
+              <h3 className="text-base font-bold text-white group-hover:text-[#2563EB] transition-colors">
                 Career Growth
               </h3>
               <p className="mt-2 text-xs text-slate-400 leading-relaxed">
@@ -804,11 +804,11 @@ export const CareersHomePage: React.FC = () => {
             </div>
 
             {/* Benefit 2: Innovative Technology */}
-            <div className="p-6 bg-slate-950/70 border border-slate-800/80 hover:border-[#00C9A7]/40 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#00C9A7]/5 group">
-              <div className="w-11 h-11 bg-[#00C9A7]/10 border border-[#00C9A7]/20 text-[#00C9A7] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <div className="p-6 bg-slate-950/70 border border-slate-800/80 hover:border-[#38BDF8]/40 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#38BDF8]/5 group">
+              <div className="w-11 h-11 bg-[#38BDF8]/10 border border-[#38BDF8]/20 text-[#38BDF8] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Cpu className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-white group-hover:text-[#00C9A7] transition-colors">
+              <h3 className="text-base font-bold text-white group-hover:text-[#38BDF8] transition-colors">
                 Innovative Technology
               </h3>
               <p className="mt-2 text-xs text-slate-400 leading-relaxed">
@@ -877,7 +877,7 @@ export const CareersHomePage: React.FC = () => {
       <section id="contact" className="py-20 bg-[#0B1120] border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
-            <span className="text-xs font-bold text-[#00D4D8] uppercase tracking-wider">
+            <span className="text-xs font-bold text-[#2563EB] uppercase tracking-wider">
               Get in Touch
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
@@ -892,7 +892,7 @@ export const CareersHomePage: React.FC = () => {
             {/* Left Column: Contact Information Cards */}
             <div className="lg:col-span-5 space-y-4">
               <div className="p-5 bg-slate-900/80 border border-slate-800 rounded-2xl flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#00D4D8]/10 border border-[#00D4D8]/20 text-[#00D4D8] flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#2563EB]/10 border border-[#2563EB]/20 text-[#2563EB] flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -903,7 +903,7 @@ export const CareersHomePage: React.FC = () => {
               </div>
 
               <div className="p-5 bg-slate-900/80 border border-slate-800 rounded-2xl flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#00C9A7]/10 border border-[#00C9A7]/20 text-[#00C9A7] flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#38BDF8]/10 border border-[#38BDF8]/20 text-[#38BDF8] flex items-center justify-center shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
@@ -924,9 +924,9 @@ export const CareersHomePage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-5 bg-gradient-to-tr from-cyan-950/40 via-slate-900/90 to-slate-900/90 border border-[#00D4D8]/20 rounded-2xl">
-                <div className="flex items-center gap-2 text-[#00D4D8] text-xs font-bold mb-1">
-                  <Zap className="w-4 h-4 fill-[#00D4D8]" />
+              <div className="p-5 bg-gradient-to-tr from-cyan-950/40 via-slate-900/90 to-slate-900/90 border border-[#2563EB]/20 rounded-2xl">
+                <div className="flex items-center gap-2 text-[#2563EB] text-xs font-bold mb-1">
+                  <Zap className="w-4 h-4 fill-[#2563EB]" />
                   <span>Candidate Response Guarantee</span>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed">
@@ -953,7 +953,7 @@ export const CareersHomePage: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                      Full Name <span className="text-[#00D4D8]">*</span>
+                      Full Name <span className="text-[#2563EB]">*</span>
                     </label>
                     <input
                       type="text"
@@ -961,13 +961,13 @@ export const CareersHomePage: React.FC = () => {
                       value={contactName}
                       onChange={(e) => setContactName(e.target.value)}
                       placeholder="e.g. Alex Morgan"
-                      className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#00D4D8]/50"
+                      className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#2563EB]/50"
                     />
                   </div>
 
                   <div>
                     <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                      Email Address <span className="text-[#00D4D8]">*</span>
+                      Email Address <span className="text-[#2563EB]">*</span>
                     </label>
                     <input
                       type="email"
@@ -975,7 +975,7 @@ export const CareersHomePage: React.FC = () => {
                       value={contactEmail}
                       onChange={(e) => setContactEmail(e.target.value)}
                       placeholder="e.g. alex@example.com"
-                      className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#00D4D8]/50"
+                      className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#2563EB]/50"
                     />
                   </div>
                 </div>
@@ -989,13 +989,13 @@ export const CareersHomePage: React.FC = () => {
                     value={contactSubject}
                     onChange={(e) => setContactSubject(e.target.value)}
                     placeholder="e.g. Inquiring about AI Architect requisition"
-                    className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#00D4D8]/50"
+                    className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#2563EB]/50"
                   />
                 </div>
 
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                    Message <span className="text-[#00D4D8]">*</span>
+                    Message <span className="text-[#2563EB]">*</span>
                   </label>
                   <textarea
                     rows={4}
@@ -1003,14 +1003,14 @@ export const CareersHomePage: React.FC = () => {
                     value={contactMessage}
                     onChange={(e) => setContactMessage(e.target.value)}
                     placeholder="Describe your inquiry, background, or question..."
-                    className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#00D4D8]/50 resize-none"
+                    className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#2563EB]/50 resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmittingContact}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#00D4D8] to-[#00C9A7] hover:from-cyan-400 hover:to-teal-400 disabled:opacity-50 text-[#0B1120] font-bold text-sm rounded-xl transition-all shadow-md cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#2563EB] to-[#38BDF8] hover:from-cyan-400 hover:to-teal-400 disabled:opacity-50 text-[#0B1120] font-bold text-sm rounded-xl transition-all shadow-md cursor-pointer"
                 >
                   <Send className="w-4 h-4" />
                   <span>{isSubmittingContact ? 'Sending Inquiry...' : 'Send Message to Recruitment'}</span>
@@ -1038,20 +1038,20 @@ export const CareersHomePage: React.FC = () => {
 
             {/* Quick Navigation */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
-              <button onClick={() => scrollToSection('open-positions')} className="hover:text-[#00D4D8] transition-colors cursor-pointer">
+              <button onClick={() => scrollToSection('open-positions')} className="hover:text-[#2563EB] transition-colors cursor-pointer">
                 Open Positions
               </button>
-              <button onClick={() => scrollToSection('about-us')} className="hover:text-[#00D4D8] transition-colors cursor-pointer">
+              <button onClick={() => scrollToSection('about-us')} className="hover:text-[#2563EB] transition-colors cursor-pointer">
                 About Us
               </button>
-              <button onClick={() => scrollToSection('why-join-us')} className="hover:text-[#00D4D8] transition-colors cursor-pointer">
+              <button onClick={() => scrollToSection('why-join-us')} className="hover:text-[#2563EB] transition-colors cursor-pointer">
                 Why Join Us
               </button>
-              <button onClick={() => scrollToSection('contact')} className="hover:text-[#00D4D8] transition-colors cursor-pointer">
+              <button onClick={() => scrollToSection('contact')} className="hover:text-[#2563EB] transition-colors cursor-pointer">
                 Contact
               </button>
-              <Link to="/login" className="hover:text-[#00D4D8] transition-colors flex items-center gap-1 font-semibold text-slate-300">
-                <LogIn className="w-3.5 h-3.5 text-[#00D4D8]" />
+              <Link to="/login" className="hover:text-[#2563EB] transition-colors flex items-center gap-1 font-semibold text-slate-300">
+                <LogIn className="w-3.5 h-3.5 text-[#2563EB]" />
                 <span>HR Portal</span>
               </Link>
             </div>

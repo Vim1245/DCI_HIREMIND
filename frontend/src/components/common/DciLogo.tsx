@@ -19,26 +19,26 @@ export const DciLogo: React.FC<DciLogoProps> = ({
       aria-label="DCI Logo"
     >
       <defs>
-        {/* Dark navy background gradient */}
+        {/* Dark Sapphire Navy background gradient */}
         <linearGradient id="dci-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#0B132B" />
-          <stop offset="100%" stopColor="#070D1E" />
+          <stop offset="0%" stopColor="#0B1528" />
+          <stop offset="100%" stopColor="#070E1E" />
         </linearGradient>
 
-        {/* Teal #00D6B5 border accent */}
+        {/* Sapphire Blue #2563EB to Electric Azure #38BDF8 border */}
         <linearGradient id="dci-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#00D6B5" stopOpacity="0.85" />
-          <stop offset="100%" stopColor="#008f7a" stopOpacity="0.35" />
+          <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.9" />
+          <stop offset="100%" stopColor="#2563EB" stopOpacity="0.6" />
         </linearGradient>
 
-        {/* Teal monogram gradient */}
-        <linearGradient id="dci-teal-accent" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#00D6B5" />
-          <stop offset="100%" stopColor="#00A389" />
+        {/* Monogram Electric Sapphire gradient */}
+        <linearGradient id="dci-blue-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#38BDF8" />
+          <stop offset="100%" stopColor="#2563EB" />
         </linearGradient>
       </defs>
 
-      {/* Dark Navy Rounded Container with Crisp Teal Border */}
+      {/* Dark Navy Rounded Container with Electric Sapphire Border */}
       <rect
         x="1"
         y="1"
@@ -54,10 +54,10 @@ export const DciLogo: React.FC<DciLogoProps> = ({
       {/* 'D' - White Vertical Spine */}
       <rect x="9" y="11" width="3.5" height="22" rx="1.75" fill="#FFFFFF" />
 
-      {/* 'D' - Bold Teal Outer Curve */}
+      {/* 'D' - Bold Electric Sapphire Outer Curve */}
       <path
         d="M11 11H18.5C23.5 11 27 14.5 27 22C27 29.5 23.5 33 18.5 33H11"
-        stroke="url(#dci-teal-accent)"
+        stroke="url(#dci-blue-accent)"
         strokeWidth="3.2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -71,8 +71,8 @@ export const DciLogo: React.FC<DciLogoProps> = ({
         strokeLinecap="round"
       />
 
-      {/* 'I' - Teal Vertical Accent Stem with White Top Illuminating Node */}
-      <rect x="31" y="17" width="3.5" height="16" rx="1.75" fill="url(#dci-teal-accent)" />
+      {/* 'I' - Electric Sapphire Stem with White Top Node */}
+      <rect x="31" y="17" width="3.5" height="16" rx="1.75" fill="url(#dci-blue-accent)" />
       <circle cx="32.75" cy="12" r="2" fill="#FFFFFF" />
     </svg>
   );
@@ -102,7 +102,7 @@ export const DciBrand: React.FC<DciBrandProps> = ({
             DCI
           </span>
           {badgeText && (
-            <span className="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-[#00D6B5]/15 text-[#00D6B5] border border-[#00D6B5]/30 shadow-xs">
+            <span className="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-blue-500/15 text-blue-400 border border-blue-500/30 shadow-xs">
               {badgeText}
             </span>
           )}

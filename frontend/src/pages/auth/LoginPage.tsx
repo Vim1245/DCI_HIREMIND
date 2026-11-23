@@ -49,7 +49,7 @@ export const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a1120] flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[#070e1c] flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 space-y-6 border border-slate-100">
         <div className="text-center space-y-2.5">
           <div className="flex justify-center">
@@ -57,7 +57,7 @@ export const LoginPage: React.FC = () => {
           </div>
           <div className="flex items-center justify-center gap-2">
             <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">DCI</h1>
-            <span className="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-[#00D6B5]/15 text-[#008f7a] border border-[#00D6B5]/30">
+            <span className="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-blue-500/15 text-blue-600 border border-blue-500/30">
               Enterprise
             </span>
           </div>
@@ -84,7 +84,7 @@ export const LoginPage: React.FC = () => {
                 }
               })}
               placeholder="recruiter@company.com"
-              className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-slate-900"
+              className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-600 outline-none text-slate-900"
             />
             {errors.email && <p className="text-xs text-rose-500 mt-1">{errors.email.message}</p>}
           </div>
@@ -98,7 +98,7 @@ export const LoginPage: React.FC = () => {
               autoComplete="current-password"
               {...register('password', { required: 'Password is required' })}
               placeholder="Enter your password"
-              className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-slate-900"
+              className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-600 outline-none text-slate-900"
             />
             {errors.password && (
               <p className="text-xs text-rose-500 mt-1">{errors.password.message}</p>
@@ -108,7 +108,7 @@ export const LoginPage: React.FC = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 rounded-lg shadow-sm transition-colors cursor-pointer"
+            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 rounded-lg shadow-sm transition-colors cursor-pointer"
           >
             <LogIn className="w-4 h-4" />
             <span>{isSubmitting ? 'Authenticating with Supabase...' : 'Sign In to Platform'}</span>

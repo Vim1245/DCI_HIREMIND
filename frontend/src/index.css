@@ -70,10 +70,10 @@
   animation: subtle-float 5s ease-in-out 2.5s infinite;
 }
 
-.glow-cyan {
-  box-shadow: 0 0 40px -10px rgba(0, 212, 216, 0.25);
+.glow-blue {
+  box-shadow: 0 0 40px -10px rgba(37, 99, 235, 0.35);
 }
 
-.glow-teal {
-  box-shadow: 0 0 40px -10px rgba(0, 201, 167, 0.25);
+.glow-azure {
+  box-shadow: 0 0 40px -10px rgba(56, 189, 248, 0.3);
 }

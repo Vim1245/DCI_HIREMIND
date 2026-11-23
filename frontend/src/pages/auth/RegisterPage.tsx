@@ -51,7 +51,7 @@ export const RegisterPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[#070e1c] flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 space-y-6">
         <div className="text-center space-y-2.5">
           <div className="flex justify-center">
@@ -59,7 +59,7 @@ export const RegisterPage: React.FC = () => {
           </div>
           <div className="flex items-center justify-center gap-2">
             <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">DCI</h1>
-            <span className="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-[#00D6B5]/15 text-[#008f7a] border border-[#00D6B5]/30">
+            <span className="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-blue-500/15 text-blue-600 border border-blue-500/30">
               Enterprise
             </span>
           </div>

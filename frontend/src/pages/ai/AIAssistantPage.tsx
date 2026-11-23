@@ -150,8 +150,8 @@ export const AIAssistantPage: React.FC = () => {
             <h1 className="text-2xl font-bold text-slate-900 tracking-tight">
               AI Recruitment Intelligence
             </h1>
-            <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-200 flex items-center gap-1">
-              <Sparkles className="w-3 h-3 text-teal-600" />
+            <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-teal-700 border border-blue-200 flex items-center gap-1">
+              <Sparkles className="w-3 h-3 text-blue-600" />
               <span>{modelName}</span>
             </span>
           </div>
@@ -192,7 +192,7 @@ export const AIAssistantPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-              <Users className="w-3.5 h-3.5 text-teal-400" />
+              <Users className="w-3.5 h-3.5 text-blue-400" />
               <span>Active Candidate Context</span>
             </label>
             <select
@@ -247,7 +247,7 @@ export const AIAssistantPage: React.FC = () => {
                   }`}
                 >
                   {msg.role === 'assistant' && (
-                    <div className="w-8 h-8 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0 shadow-xs">
+                    <div className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-xs">
                       <Bot className="w-4 h-4" />
                     </div>
                   )}
@@ -264,7 +264,7 @@ export const AIAssistantPage: React.FC = () => {
               ))}
               {isSending && (
                 <div className="flex gap-3 justify-start items-center text-xs text-slate-400 italic">
-                  <div className="w-8 h-8 rounded-lg bg-teal-600/20 text-teal-600 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-600 flex items-center justify-center shrink-0">
                     <RefreshCw className="w-4 h-4 animate-spin" />
                   </div>
                   <span>AI Copilot is analyzing recruitment data...</span>
@@ -281,12 +281,12 @@ export const AIAssistantPage: React.FC = () => {
                   value={inputPrompt}
                   onChange={(e) => setInputPrompt(e.target.value)}
                   disabled={isSending}
-                  className="flex-1 px-4 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                  className="flex-1 px-4 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
                 />
                 <button
                   type="submit"
                   disabled={isSending || !inputPrompt.trim()}
-                  className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 rounded-lg shadow-xs transition-colors"
+                  className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 rounded-lg shadow-xs transition-colors"
                 >
                   <Send className="w-4 h-4" />
                   <span>Send</span>
@@ -309,7 +309,7 @@ export const AIAssistantPage: React.FC = () => {
                     onClick={() => {
                       setInputPrompt(prompt);
                     }}
-                    className="w-full text-left p-2.5 text-xs font-medium text-slate-700 bg-slate-50 hover:bg-teal-50/70 hover:text-teal-900 border border-slate-200/80 rounded-lg transition-colors leading-snug"
+                    className="w-full text-left p-2.5 text-xs font-medium text-slate-700 bg-slate-50 hover:bg-blue-50/70 hover:text-teal-900 border border-slate-200/80 rounded-lg transition-colors leading-snug"
                   >
                     "{prompt}"
                   </button>
@@ -317,9 +317,9 @@ export const AIAssistantPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="enterprise-card p-4 bg-teal-50/50 border-teal-200 text-xs space-y-2">
+            <div className="enterprise-card p-4 bg-blue-50/50 border-blue-200 text-xs space-y-2">
               <div className="flex items-center gap-1.5 font-bold text-teal-800">
-                <ShieldCheck className="w-4 h-4 text-teal-600" />
+                <ShieldCheck className="w-4 h-4 text-blue-600" />
                 <span>Ethical AI Directive</span>
               </div>
               <p className="text-teal-950 text-[11px] leading-relaxed">
@@ -343,7 +343,7 @@ export const AIAssistantPage: React.FC = () => {
             <button
               onClick={handleRunMatch}
               disabled={isMatching || !selectedCandidateId || !selectedJobId}
-              className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 disabled:bg-slate-300 rounded-lg shadow-xs transition-colors shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 rounded-lg shadow-xs transition-colors shrink-0"
             >
               {isMatching ? (
                 <>
@@ -364,7 +364,7 @@ export const AIAssistantPage: React.FC = () => {
               {/* Score Header */}
               <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-slate-200">
                 <div className="space-y-1 text-center md:text-left">
-                  <div className="text-xs font-semibold text-teal-600 uppercase tracking-wider">
+                  <div className="text-xs font-semibold text-blue-600 uppercase tracking-wider">
                     Role Fit Assessment
                   </div>
                   <h3 className="text-xl font-extrabold text-slate-900">
@@ -374,7 +374,7 @@ export const AIAssistantPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="text-center p-4 bg-teal-50 border border-teal-200 rounded-2xl min-w-[120px]">
+                  <div className="text-center p-4 bg-blue-50 border border-blue-200 rounded-2xl min-w-[120px]">
                     <div className="text-3xl font-extrabold text-teal-700">
                       {matchResult.match_score}%
                     </div>
@@ -429,7 +429,7 @@ export const AIAssistantPage: React.FC = () => {
 
               {/* Ethical Note */}
               <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-600 flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-teal-600 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-blue-600 shrink-0" />
                 <span>{matchResult.ethical_note}</span>
               </div>
             </div>

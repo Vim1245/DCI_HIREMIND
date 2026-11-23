@@ -89,7 +89,7 @@ export const EthicalGuardPage: React.FC = () => {
         <div className="enterprise-card p-5 border-l-4 border-l-teal-500">
           <div className="flex items-center justify-between text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
             <span>Human Oversight Ratio</span>
-            <UserCheck className="w-4 h-4 text-teal-600" />
+            <UserCheck className="w-4 h-4 text-blue-600" />
           </div>
           <div className="text-3xl font-extrabold text-slate-900">100%</div>
           <p className="text-[11px] text-slate-500 mt-1">
@@ -123,7 +123,7 @@ export const EthicalGuardPage: React.FC = () => {
       {/* Core Governance Principles */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="enterprise-card p-5 space-y-2">
-          <div className="w-8 h-8 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center font-bold text-sm">
+          <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm">
             1
           </div>
           <h3 className="font-bold text-slate-900 text-sm">Mandatory Human Sign-off</h3>
@@ -157,7 +157,7 @@ export const EthicalGuardPage: React.FC = () => {
       <div className="enterprise-card p-5 space-y-4">
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">
           <div className="flex items-center gap-2">
-            <FileCheck2 className="w-5 h-5 text-teal-600" />
+            <FileCheck2 className="w-5 h-5 text-blue-600" />
             <h2 className="text-base font-bold text-slate-900">
               Candidate Review & Oversight Log ({applications.length})
             </h2>

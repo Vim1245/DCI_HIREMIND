@@ -133,7 +133,7 @@ export const DashboardPage: React.FC = () => {
             <h1 className="text-2xl font-bold text-slate-900 tracking-tight">
               Enterprise HR Admin Portal
             </h1>
-            <span className="text-[11px] font-bold uppercase tracking-wider bg-teal-50 text-teal-700 border border-teal-200 px-2.5 py-0.5 rounded-full">
+            <span className="text-[11px] font-bold uppercase tracking-wider bg-blue-50 text-teal-700 border border-blue-200 px-2.5 py-0.5 rounded-full">
               PostgreSQL Live
             </span>
           </div>
@@ -146,9 +146,9 @@ export const DashboardPage: React.FC = () => {
           <Link
             to="/careers"
             target="_blank"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold text-teal-800 bg-teal-50 border border-teal-200 rounded-lg hover:bg-teal-100 shadow-2xs transition-colors"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold text-teal-800 bg-blue-50 border border-blue-200 rounded-lg hover:bg-blue-100 shadow-2xs transition-colors"
           >
-            <Globe className="w-4 h-4 text-teal-600" />
+            <Globe className="w-4 h-4 text-blue-600" />
             <span>View Public Careers Site</span>
           </Link>
           <button
@@ -161,7 +161,7 @@ export const DashboardPage: React.FC = () => {
           </button>
           <Link
             to="/candidates/register"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg shadow-xs transition-colors"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-xs transition-colors"
           >
             <UserPlus className="w-4 h-4" />
             <span>Add Candidate</span>
@@ -208,7 +208,7 @@ export const DashboardPage: React.FC = () => {
       <div className="p-5 bg-white rounded-2xl border border-slate-200 shadow-2xs space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Activity className="w-4 h-4 text-teal-600" />
+            <Activity className="w-4 h-4 text-blue-600" />
             <h2 className="text-sm font-bold text-slate-800">
               Live Recruitment Pipeline Distribution
             </h2>
@@ -288,12 +288,12 @@ export const DashboardPage: React.FC = () => {
           <div>
             <div className="p-4 border-b border-slate-100 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <FileCheck2 className="w-4 h-4 text-teal-600" />
+                <FileCheck2 className="w-4 h-4 text-blue-600" />
                 <h3 className="text-sm font-bold text-slate-800">Recent Applications</h3>
               </div>
               <Link
                 to="/applications"
-                className="text-xs font-semibold text-teal-600 hover:text-teal-700 flex items-center gap-1"
+                className="text-xs font-semibold text-blue-600 hover:text-teal-700 flex items-center gap-1"
               >
                 <span>View All</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -345,7 +345,7 @@ export const DashboardPage: React.FC = () => {
                       </span>
                       <Link
                         to="/applications"
-                        className="p-1.5 text-slate-400 hover:text-teal-600 rounded-lg hover:bg-slate-100"
+                        className="p-1.5 text-slate-400 hover:text-blue-600 rounded-lg hover:bg-slate-100"
                         title="Process application"
                       >
                         <Eye className="w-4 h-4" />
@@ -368,7 +368,7 @@ export const DashboardPage: React.FC = () => {
               </div>
               <Link
                 to="/candidates"
-                className="text-xs font-semibold text-teal-600 hover:text-teal-700 flex items-center gap-1"
+                className="text-xs font-semibold text-blue-600 hover:text-teal-700 flex items-center gap-1"
               >
                 <span>View All</span>
                 <ArrowRight className="w-3.5 h-3.5" />

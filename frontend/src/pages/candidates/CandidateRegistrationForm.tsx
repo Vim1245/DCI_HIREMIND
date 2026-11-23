@@ -147,7 +147,7 @@ export const CandidateRegistrationForm: React.FC = () => {
             </div>
             <div className="text-slate-500">
               Ethical Anonymized ID:{' '}
-              <span className="font-mono text-teal-700 bg-teal-50 px-1.5 py-0.5 rounded border border-teal-200">
+              <span className="font-mono text-teal-700 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-200">
                 {successResult.anonymized_id}
               </span>
             </div>
@@ -164,7 +164,7 @@ export const CandidateRegistrationForm: React.FC = () => {
             </button>
             <button
               onClick={() => navigate('/candidates')}
-              className="px-4 py-2 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg shadow-xs transition-colors"
+              className="px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-xs transition-colors"
             >
               View Candidates Directory
             </button>
@@ -374,7 +374,7 @@ export const CandidateRegistrationForm: React.FC = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg shadow-xs transition-colors disabled:opacity-50"
+              className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-xs transition-colors disabled:opacity-50"
             >
               <UserPlus className="w-4 h-4" />
               <span>{isSubmitting ? 'Saving to Supabase...' : editId ? 'Update Profile' : 'Register Candidate'}</span>

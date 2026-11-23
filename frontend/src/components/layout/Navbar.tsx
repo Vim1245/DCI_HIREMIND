@@ -51,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onToggleSidebar }) => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 bg-[#0a1120] border-b border-slate-800 text-white shadow-xs">
+    <header className="sticky top-0 z-40 bg-[#070e1c] border-b border-slate-800 text-white shadow-xs">
       <div className="flex items-center justify-between px-4 sm:px-6 h-16">
         <div className="flex items-center gap-3">
           <button
@@ -72,11 +72,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onToggleSidebar }) => {
 
         <div className="flex items-center gap-2.5 sm:gap-4">
           {/* AI Engine Status */}
-          <div className="hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-teal-500/30 text-xs">
-            <Sparkles className="w-3.5 h-3.5 text-teal-400" />
+          <div className="hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-blue-500/30 text-xs">
+            <Sparkles className="w-3.5 h-3.5 text-blue-400" />
             <span className="text-slate-400">AI:</span>
-            <span className="font-semibold text-teal-300 truncate max-w-[130px]">{aiStatus}</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" />
+            <span className="font-semibold text-blue-300 truncate max-w-[130px]">{aiStatus}</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
           </div>
 
           {/* Supabase PostgreSQL Status */}
@@ -93,9 +93,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onToggleSidebar }) => {
           <Link
             to="/careers"
             target="_blank"
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-teal-500/30 text-xs text-teal-300 hover:text-white transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-blue-500/30 text-xs text-blue-400 hover:text-white transition-colors"
           >
-            <Globe className="w-3.5 h-3.5 text-teal-400" />
+            <Globe className="w-3.5 h-3.5 text-blue-400" />
             <span>Public Careers</span>
           </Link>
 
@@ -110,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onToggleSidebar }) => {
                   {user.role === 'Admin' ? (
                     <ShieldCheck className="w-3 h-3 text-amber-400" />
                   ) : (
-                    <UserCheck className="w-3 h-3 text-teal-400" />
+                    <UserCheck className="w-3 h-3 text-blue-400" />
                   )}
                   <span className="font-medium text-slate-300">{user.role}</span>
                 </div>

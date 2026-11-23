@@ -1,33 +1,27 @@
 <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="dci-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B132B" />
-      <stop offset="100%" stop-color="#070D1E" />
+      <stop offset="0%" stop-color="#0B1528" />
+      <stop offset="100%" stop-color="#070E1E" />
     </linearGradient>
     <linearGradient id="dci-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00D6B5" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#008f7a" stop-opacity="0.4" />
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0.6" />
     </linearGradient>
-    <linearGradient id="dci-teal-accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00D6B5" />
-      <stop offset="100%" stop-color="#00A389" />
+    <linearGradient id="dci-blue-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#2563EB" />
     </linearGradient>
   </defs>
 
-  <!-- Dark Navy Container with Crisp Teal Border -->
   <rect x="1" y="1" width="42" height="42" rx="10" fill="url(#dci-bg-grad)" stroke="url(#dci-border-grad)" stroke-width="2" />
 
-  <!-- DCI Monogram Geometry -->
-  <!-- 'D' - White Vertical Spine -->
   <rect x="9" y="11" width="3.5" height="22" rx="1.75" fill="#FFFFFF" />
 
-  <!-- 'D' - Bold Teal Outer Curve -->
-  <path d="M11 11H18.5C23.5 11 27 14.5 27 22C27 29.5 23.5 33 18.5 33H11" stroke="url(#dci-teal-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M11 11H18.5C23.5 11 27 14.5 27 22C27 29.5 23.5 33 18.5 33H11" stroke="url(#dci-blue-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
 
-  <!-- 'C' - White Central Precision Contour -->
   <path d="M22 17.5C20.5 15.5 18 14.5 15.5 14.5C11.5 14.5 8.5 17.5 8.5 22C8.5 26.5 11.5 29.5 15.5 29.5C18 29.5 20.5 28.5 22 26.5" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" />
 
-  <!-- 'I' - Teal Vertical Accent Stem with White Top Illuminating Node -->
-  <rect x="31" y="17" width="3.5" height="16" rx="1.75" fill="url(#dci-teal-accent)" />
+  <rect x="31" y="17" width="3.5" height="16" rx="1.75" fill="url(#dci-blue-accent)" />
   <circle cx="32.75" cy="12" r="2" fill="#FFFFFF" />
 </svg>
