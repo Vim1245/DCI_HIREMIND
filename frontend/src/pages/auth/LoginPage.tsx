@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { LogIn, ShieldCheck } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { AlertBanner } from '../../components/common/AlertBanner';
+import { DciLogo } from '../../components/common/DciLogo';
 
 interface LoginFormData {
   email: string;
@@ -50,11 +51,16 @@ export const LoginPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#0a1120] flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 space-y-6 border border-slate-100">
-        <div className="text-center space-y-2">
-          <div className="w-12 h-12 bg-linear-to-tr from-teal-500 to-cyan-400 rounded-xl flex items-center justify-center font-extrabold text-xl text-slate-950 mx-auto shadow-md">
-            H
+        <div className="text-center space-y-2.5">
+          <div className="flex justify-center">
+            <DciLogo className="w-14 h-14" />
           </div>
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">DCI HireMind</h1>
+          <div className="flex items-center justify-center gap-2">
+            <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">DCI</h1>
+            <span className="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-[#00D6B5]/15 text-[#008f7a] border border-[#00D6B5]/30">
+              Enterprise
+            </span>
+          </div>
           <p className="text-xs text-slate-500">
             Sign in to access Enterprise AI Recruitment and live Supabase PostgreSQL.
           </p>

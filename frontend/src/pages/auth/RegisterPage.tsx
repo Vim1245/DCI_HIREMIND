@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { UserPlus } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { AlertBanner } from '../../components/common/AlertBanner';
+import { DciLogo } from '../../components/common/DciLogo';
 
 interface RegisterFormData {
   email: string;
@@ -52,13 +53,18 @@ export const RegisterPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 space-y-6">
-        <div className="text-center space-y-2">
-          <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center font-bold text-xl text-white mx-auto shadow-md">
-            H
+        <div className="text-center space-y-2.5">
+          <div className="flex justify-center">
+            <DciLogo className="w-14 h-14" />
           </div>
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Create Account</h1>
+          <div className="flex items-center justify-center gap-2">
+            <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">DCI</h1>
+            <span className="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-[#00D6B5]/15 text-[#008f7a] border border-[#00D6B5]/30">
+              Enterprise
+            </span>
+          </div>
           <p className="text-xs text-slate-500">
-            Join DCI HireMind Enterprise AI Recruitment Platform.
+            Join DCI Enterprise AI Recruitment Platform.
           </p>
         </div>
 

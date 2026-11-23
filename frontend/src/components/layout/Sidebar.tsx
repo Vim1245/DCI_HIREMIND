@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { DciBrand } from '../common/DciLogo';
 import {
   LayoutDashboard,
   Users,
@@ -98,12 +99,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       >
         {/* Mobile Header */}
         <div className="flex items-center justify-between p-4 border-b border-slate-800 lg:hidden">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-teal-500/20 border border-teal-500/40 flex items-center justify-center font-bold text-teal-400">
-              H
-            </div>
-            <span className="font-bold text-white text-base">DCI HireMind</span>
-          </div>
+          <DciBrand
+            badgeText="ENTERPRISE"
+            logoSize="w-8 h-8"
+            subtitle=""
+          />
           <button
             onClick={onClose}
             className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800"

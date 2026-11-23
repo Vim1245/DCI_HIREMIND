@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { DciLogo } from '../../components/common/DciLogo';
 import {
-  Zap,
   ArrowLeft,
   Upload,
   FileText,
@@ -266,9 +266,7 @@ export const PublicJobApplyPage: React.FC = () => {
             to={`/careers/jobs/${job.id}`}
             className="inline-flex items-center gap-2.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-teal-400 flex items-center justify-center text-slate-950 shadow-md">
-              <Zap className="w-4 h-4 fill-slate-950" />
-            </div>
+            <DciLogo className="w-8 h-8" />
             <ArrowLeft className="w-3.5 h-3.5 text-cyan-400" />
             <span>Back to Role Details</span>
           </Link>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { systemAPI } from '../../services/api';
 import { Database, LogOut, Menu, ShieldCheck, Sparkles, UserCheck, Globe } from 'lucide-react';
+import { DciBrand } from '../common/DciLogo';
 
 interface NavbarProps {
   onToggleSidebar: () => void;
@@ -60,22 +61,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onToggleSidebar }) => {
           >
             <Menu className="w-5 h-5" />
           </button>
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-linear-to-tr from-teal-500 to-cyan-400 flex items-center justify-center font-extrabold text-base text-slate-950 shadow-sm">
-              H
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-lg tracking-tight text-white">DCI HireMind</span>
-                <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30">
-                  Enterprise
-                </span>
-              </div>
-              <p className="text-[11px] text-slate-400 hidden sm:block">
-                AI HR & Recruitment Automation Platform
-              </p>
-            </div>
-          </div>
+          <Link to="/dashboard" className="hover:opacity-95 transition-opacity">
+            <DciBrand
+              badgeText="ENTERPRISE"
+              subtitle="AI HR & Recruitment Platform"
+              logoSize="w-9 h-9"
+            />
+          </Link>
         </div>
 
         <div className="flex items-center gap-2.5 sm:gap-4">

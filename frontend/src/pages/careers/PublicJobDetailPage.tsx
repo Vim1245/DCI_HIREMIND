@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { DciLogo } from '../../components/common/DciLogo';
 import {
-  Zap,
   Briefcase,
   MapPin,
   Clock,
@@ -88,10 +88,8 @@ export const PublicJobDetailPage: React.FC = () => {
             to="/careers"
             className="inline-flex items-center gap-2.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-teal-400 flex items-center justify-center text-slate-950 shadow-md">
-              <Zap className="w-4 h-4 fill-slate-950" />
-            </div>
-            <span>DCI HireMind Careers</span>
+            <DciLogo className="w-8 h-8" />
+            <span className="font-extrabold text-white text-sm tracking-tight">DCI Careers</span>
           </Link>
 
           <div className="flex items-center gap-3">

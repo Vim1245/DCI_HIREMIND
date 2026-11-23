@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { DciBrand } from '../../components/common/DciLogo';
 import {
   Zap,
   Briefcase,
@@ -139,18 +140,11 @@ export const CareersHomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Brand Logo & Subtitle */}
           <div className="flex items-center gap-3.5 group cursor-pointer" onClick={() => scrollToSection('hero')}>
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-[#00D4D8] via-[#00C9A7] to-emerald-400 flex items-center justify-center shadow-lg shadow-[#00D4D8]/25 text-[#0B1120] group-hover:scale-105 transition-transform duration-300">
-              <Zap className="w-6 h-6 fill-[#0B1120] text-[#0B1120]" />
-            </div>
-            <div>
-              <div className="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
-                <span>DCI HireMind</span>
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-[#00D4D8]/10 text-[#00D4D8] border border-[#00D4D8]/30 px-2.5 py-0.5 rounded-full">
-                  Careers
-                </span>
-              </div>
-              <p className="text-[11px] text-slate-400 font-medium tracking-tight">Enterprise AI Talent Opportunities</p>
-            </div>
+            <DciBrand
+              badgeText="CAREERS"
+              subtitle="Enterprise AI Talent Opportunities"
+              logoSize="w-11 h-11 group-hover:scale-105 transition-transform duration-300"
+            />
           </div>
 
           {/* Desktop Navigation Links */}
@@ -1035,13 +1029,11 @@ export const CareersHomePage: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-900">
             {/* Brand Logo & Name */}
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#00D4D8] to-[#00C9A7] flex items-center justify-center text-[#0B1120] shadow-md">
-                <Zap className="w-5 h-5 fill-[#0B1120]" />
-              </div>
-              <div>
-                <span className="font-extrabold text-base text-white tracking-tight">DCI HireMind</span>
-                <p className="text-[11px] text-slate-500">Enterprise AI Talent Opportunities</p>
-              </div>
+              <DciBrand
+                badgeText=""
+                subtitle="Enterprise AI Talent Opportunities"
+                logoSize="w-9 h-9"
+              />
             </div>
 
             {/* Quick Navigation */}
