@@ -97,27 +97,34 @@ async def get_current_user(
         canonical_role = normalize_role(raw_role)
 
         # Check / sync database user profile
-        db_user = db.scalar(
-            select(User).where(
-                (User.supabase_uid == str(auth_user.id)) | (User.email == auth_user.email)
+        db_user = None
+        try:
+            db_user = db.scalar(
+                select(User).where(
+                    (User.supabase_uid == str(auth_user.id)) | (User.email == auth_user.email)
+                )
             )
-        )
+        except Exception as db_err:
+            logger.warning(f"Database query failed in get_current_user (falling back to JWT metadata): {db_err}")
 
         full_name = metadata.get("full_name")
         phone_number = metadata.get("phone_number") or metadata.get("phone")
 
         if not db_user:
-            db_user = User(
-                supabase_uid=str(auth_user.id),
-                email=auth_user.email or "",
-                full_name=full_name,
-                phone_number=phone_number,
-                role=canonical_role,
-                is_active=True,
-            )
-            db.add(db_user)
-            db.commit()
-            db.refresh(db_user)
+            try:
+                db_user = User(
+                    supabase_uid=str(auth_user.id),
+                    email=auth_user.email or "",
+                    full_name=full_name,
+                    phone_number=phone_number,
+                    role=canonical_role,
+                    is_active=True,
+                )
+                db.add(db_user)
+                db.commit()
+                db.refresh(db_user)
+            except Exception:
+                db.rollback()
         else:
             # Sync any updated UID or fields
             dirty = False
@@ -131,17 +138,20 @@ async def get_current_user(
                 db_user.phone_number = phone_number
                 dirty = True
             if dirty:
-                db.commit()
+                try:
+                    db.commit()
+                except Exception:
+                    db.rollback()
 
         # Database role takes precedence if modified by an Admin
-        final_role = normalize_role(db_user.role or canonical_role)
+        final_role = normalize_role((db_user.role if db_user else None) or canonical_role)
 
         return SupabaseUser(
             id=str(auth_user.id),
             email=auth_user.email or "",
-            full_name=db_user.full_name or full_name,
+            full_name=(db_user.full_name if db_user else None) or full_name,
             role=final_role,
-            phone_number=db_user.phone_number or phone_number,
+            phone_number=(db_user.phone_number if db_user else None) or phone_number,
             email_confirmed=bool(auth_user.confirmed_at or auth_user.email_confirmed_at),
             user_metadata=metadata,
             app_metadata=auth_user.app_metadata or {},

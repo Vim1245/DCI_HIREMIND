@@ -207,27 +207,45 @@ async def login(
         )
 
     # Sync / fetch database profile
-    db_user = db.scalar(
-        select(User).where(
-            (User.supabase_uid == str(auth_user.id)) | (User.email == auth_user.email)
+    db_user = None
+    try:
+        db_user = db.scalar(
+            select(User).where(
+                (User.supabase_uid == str(auth_user.id)) | (User.email == auth_user.email)
+            )
         )
-    )
+    except Exception as db_exc:
+        logger.warning(f"Database query failed during login (using Supabase Auth profile fallback): {db_exc}")
 
     metadata = auth_user.user_metadata or {}
     canonical_role = normalize_role(metadata.get("role", "Candidate"))
 
+    user_data = {
+        "id": db_user.id if db_user else 1,
+        "supabase_uid": str(auth_user.id),
+        "email": (db_user.email if db_user else auth_user.email) or "",
+        "full_name": (db_user.full_name if db_user else metadata.get("full_name")) or "User",
+        "role": db_user.role if db_user else canonical_role,
+        "phone_number": db_user.phone_number if db_user else metadata.get("phone_number"),
+        "created_at": db_user.created_at.isoformat() if db_user and db_user.created_at else None,
+    }
+
     if not db_user:
-        db_user = User(
-            supabase_uid=str(auth_user.id),
-            email=auth_user.email or "",
-            full_name=metadata.get("full_name"),
-            phone_number=metadata.get("phone_number"),
-            role=canonical_role,
-            is_active=True,
-        )
-        db.add(db_user)
-        db.commit()
-        db.refresh(db_user)
+        try:
+            db_user = User(
+                supabase_uid=str(auth_user.id),
+                email=auth_user.email or "",
+                full_name=metadata.get("full_name"),
+                phone_number=metadata.get("phone_number"),
+                role=canonical_role,
+                is_active=True,
+            )
+            db.add(db_user)
+            db.commit()
+            db.refresh(db_user)
+            user_data["id"] = db_user.id
+        except Exception:
+            db.rollback()
 
     return {
         "success": True,
@@ -236,15 +254,7 @@ async def login(
         "refresh_token": session.refresh_token,
         "token_type": "bearer",
         "expires_in": session.expires_in,
-        "user": {
-            "id": db_user.id,
-            "supabase_uid": str(auth_user.id),
-            "email": db_user.email,
-            "full_name": db_user.full_name,
-            "role": db_user.role,
-            "phone_number": db_user.phone_number,
-            "created_at": db_user.created_at.isoformat() if db_user.created_at else None,
-        },
+        "user": user_data,
     }
 
 
@@ -333,11 +343,15 @@ async def get_me(
     Retrieves the authenticated user's verified identity, role, and profile.
     Protected by Supabase JWT verification.
     """
-    db_user = db.scalar(
-        select(User).where(
-            (User.supabase_uid == current_user.id) | (User.email == current_user.email)
+    db_user = None
+    try:
+        db_user = db.scalar(
+            select(User).where(
+                (User.supabase_uid == current_user.id) | (User.email == current_user.email)
+            )
         )
-    )
+    except Exception as exc:
+        logger.warning(f"Database query failed in /me (using SupabaseUser session profile): {exc}")
 
     return {
         "success": True,
