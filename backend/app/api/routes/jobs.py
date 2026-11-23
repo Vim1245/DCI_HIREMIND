@@ -78,7 +78,7 @@ async def create_job(
         logger.error(f"Error creating job: {exc}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Failed to create job requisition.",
+            detail=f"Failed to create job requisition: {str(exc)}",
         )
 
 

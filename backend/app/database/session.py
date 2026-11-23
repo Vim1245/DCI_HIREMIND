@@ -92,10 +92,17 @@ def check_db_connection() -> Tuple[bool, str, Dict[str, Any]]:
         (is_healthy, dialect_name, diagnostics)
     """
     dialect = "sqlite" if settings.USE_SQLITE else "postgresql"
+    active_host = settings.SUPABASE_DB_HOST
+    try:
+        if "@" in settings.effective_database_url and ":" in settings.effective_database_url.split("@")[1]:
+            active_host = settings.effective_database_url.split("@")[1].split(":")[0]
+    except Exception:
+        pass
+
     diagnostics: Dict[str, Any] = {
         "engine": dialect,
         "is_explicit_sqlite_test_mode": settings.USE_SQLITE,
-        "supabase_host": settings.SUPABASE_DB_HOST,
+        "supabase_host": active_host,
         "supabase_port": settings.SUPABASE_DB_PORT,
         "database_name": settings.SUPABASE_DB_NAME,
         "credentials_configured": settings.has_postgres_credentials,

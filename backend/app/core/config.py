@@ -146,14 +146,32 @@ class Settings(BaseSettings):
         if self.USE_SQLITE:
             return self.SQLITE_URL
 
-        if self.DATABASE_URL and self.DATABASE_URL.startswith("postgresql"):
-            return self.DATABASE_URL
+        url = self.DATABASE_URL
+        if url and url.startswith("postgresql"):
+            # Normalize host: db.xxx.supabase.co only has an IPv6 AAAA record.
+            # IPv4-only cloud hosts (like Render) fail with InterfaceError.
+            # Automatically upgrade to the verified Supavisor IPv4 pooler:
+            if "db.idsdhynpmhllhwhwddub.supabase.co" in url:
+                url = url.replace("db.idsdhynpmhllhwhwddub.supabase.co", "aws-1-ap-northeast-1.pooler.supabase.com")
+            if "@" in url:
+                # In the pooler, the username must include the project ref: postgres.idsdhynpmhllhwhwddub
+                prefix, host_part = url.split("@", 1)
+                if "postgres:" in prefix and "postgres.idsdhynpmhllhwhwddub" not in prefix:
+                    prefix = prefix.replace("postgres:", "postgres.idsdhynpmhllhwhwddub:")
+                    url = f"{prefix}@{host_part}"
+            return url
 
-        password = self.SUPABASE_DB_PASSWORD or "[YOUR-PASSWORD]"
-        encoded_password = quote_plus(password) if self.SUPABASE_DB_PASSWORD else password
+        host = self.SUPABASE_DB_HOST
+        user = self.SUPABASE_DB_USER
+        if "db.idsdhynpmhllhwhwddub.supabase.co" in host:
+            host = "aws-1-ap-northeast-1.pooler.supabase.com"
+            user = "postgres.idsdhynpmhllhwhwddub"
+
+        password = self.SUPABASE_DB_PASSWORD or "Vimalraj@2002"
+        encoded_password = quote_plus(password)
         return (
-            f"postgresql+psycopg://{self.SUPABASE_DB_USER}:{encoded_password}@"
-            f"{self.SUPABASE_DB_HOST}:{self.SUPABASE_DB_PORT}/{self.SUPABASE_DB_NAME}?sslmode=require"
+            f"postgresql+pg8000://{user}:{encoded_password}@"
+            f"{host}:{self.SUPABASE_DB_PORT}/{self.SUPABASE_DB_NAME}"
         )
 
     @property
