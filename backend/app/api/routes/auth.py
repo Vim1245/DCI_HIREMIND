@@ -218,7 +218,7 @@ async def login(
         logger.warning(f"Database query failed during login (using Supabase Auth profile fallback): {db_exc}")
 
     metadata = auth_user.user_metadata or {}
-    canonical_role = normalize_role(metadata.get("role", "Candidate"))
+    canonical_role = normalize_role(metadata.get("role"), email=auth_user.email)
 
     user_data = {
         "id": db_user.id if db_user else 1,

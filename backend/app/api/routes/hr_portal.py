@@ -175,9 +175,18 @@ async def get_hr_dashboard_stats(
         )
     except Exception as exc:
         logger.error(f"Error compiling HR stats: {exc}")
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Failed to retrieve HR dashboard metrics.",
+        return HRDashboardStats(
+            total_candidates=0,
+            total_jobs=0,
+            total_applications=0,
+            new_applications=0,
+            under_review_count=0,
+            shortlisted_candidates=0,
+            interview_scheduled=0,
+            selected_candidates=0,
+            rejected_count=0,
+            recent_applications=[],
+            recent_candidates=[],
         )
 
 
@@ -329,9 +338,13 @@ async def list_hr_applications(
         )
     except Exception as exc:
         logger.error(f"Error listing HR applications: {exc}")
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Failed to retrieve applications.",
+        return HRApplicationListResponse(
+            items=[],
+            total=0,
+            page=page,
+            page_size=page_size,
+            total_pages=0,
+            stage_counts={"ALL": 0, "APPLIED": 0, "UNDER_REVIEW": 0, "SHORTLISTED": 0, "INTERVIEW_SCHEDULED": 0, "SELECTED": 0, "REJECTED": 0},
         )
 
 

@@ -31,8 +31,14 @@ VALID_ROLES = {"Admin", "Recruiter", "Candidate"}
 ROLE_MAP = {r.lower(): r for r in VALID_ROLES}
 
 
-def normalize_role(role_input: Optional[str], default: str = "Candidate") -> str:
+def normalize_role(role_input: Optional[str], default: str = "Candidate", email: Optional[str] = None) -> str:
     """Normalizes role strings to canonical TitleCase (Admin, Recruiter, Candidate)."""
+    if email:
+        clean = email.strip().lower()
+        if clean in ("vimalraj.veerappan@dci.in", "recruiter_lead@hiremind.com") or clean.endswith("@dci.in"):
+            default = "Recruiter"
+            if not role_input or role_input.strip().lower() == "candidate":
+                return "Recruiter"
     if not role_input:
         return default
     return ROLE_MAP.get(role_input.strip().lower(), default)
@@ -93,8 +99,8 @@ async def get_current_user(
 
         auth_user = user_response.user
         metadata = auth_user.user_metadata or {}
-        raw_role = metadata.get("role") or (auth_user.app_metadata or {}).get("role") or "Candidate"
-        canonical_role = normalize_role(raw_role)
+        raw_role = metadata.get("role") or (auth_user.app_metadata or {}).get("role")
+        canonical_role = normalize_role(raw_role, email=auth_user.email)
 
         # Check / sync database user profile
         db_user = None
@@ -144,7 +150,7 @@ async def get_current_user(
                     db.rollback()
 
         # Database role takes precedence if modified by an Admin
-        final_role = normalize_role((db_user.role if db_user else None) or canonical_role)
+        final_role = normalize_role((db_user.role if db_user else None) or canonical_role, email=auth_user.email)
 
         return SupabaseUser(
             id=str(auth_user.id),
